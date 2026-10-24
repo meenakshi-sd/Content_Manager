@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F9F2E8;
+  --foreground: #211C1D;
+  --primary: #832632;
+  --secondary: #624641;
+  --card: #FFFDF9;
+  --border: #E8DED1;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9F2E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9C8B5;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #832632;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Warm Cream Theme Custom Classes */
+.bg-cream-bg {
+  background-color: #F9F2E8;
+}
+
+.bg-burgundy-primary {
+  background-color: #832632;
+}
+
+.text-burgundy-primary {
+  color: #832632;
+}
+
+.border-burgundy-primary {
+  border-color: #832632;
+}
+
+.bg-deep-dark {
+  background-color: #211C1D;
+}
+
+.text-deep-dark {
+  color: #211C1D;
+}
+
+.bg-muted-brown {
+  background-color: #624641;
+}
+
+.text-muted-brown {
+  color: #624641;
+}
+
+.bg-card-warm {
+  background-color: #FFFDF9;
+}
+
+.border-warm {
+  border-color: #E5DCD0;
+}
